@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>КубГУ</title>
+    <style>
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        form label span {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Маркированный список гиперсылок</h1>
+<ul>
+    <li><a href="http://kubsu.ru/">КубГУ (http)</a></li>
+    <li><a href="https://kubsu.ru/">КубГУ (https)</a></li>
+    <li><a href="https://kubsu.ru/"><img src="https://upload.wikimedia.org/wikipedia/ru/a/a2/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9A%D1%83%D0%B1%D0%93%D0%A3.png" alt="Логотип КубГУ" width="100" height="100"></a></li>
+    <li><a href="#forma">Сокращенная на внутреннюю страницу (форма)</a></li>
+    <li><a href="#">Сокращенная на главную страницу</a></li>
+    <li><a href="#forma">На фрагмент текущей страницы (форма)</a></li>
+    <li><a href="https://www.google.com/search?q=КубГУ&num=1&hl=ru">С тремя параметрами</a></li>
+    <li><a href="https://kubsu.ru/ru/user/74030">С параметром id</a></li>
+    <li><a href="page.html">Относительная на страницу в текущем каталоге</a></li>
+    <li><a href="about/page.html">Относительная на страницу в каталоге about</a></li>
+    <li><a href="../higher.html">Относительная на страницу уровнем выше</a></li>
+    <li><a href="../../higher2.html">Относительная на страницу двумя уровнями выше</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Kuban_State_University#History">На фрагмент страницы стороннего сайта</a></li>
+    <li>Ссылки из прямоугольных и круглых областей картинки (map):
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/World_map_blank_without_borders.svg/320px-World_map_blank_without_borders.svg.png" alt="Карта" width="320" height="160" usemap="#map">
+        <map name="map">
+            <area shape="rect" coords="20,20,140,80" href="https://kubsu.ru" alt="Переход на kubsu.ru" title="Переход на kubsu.ru">
+            <area shape="circle" coords="230,80,36" href="https://github.com" alt="Переход на GitHub" title="Переход на GitHub">
+        </map>
+    </li>
+    <li><a href="">Пустая ссылка (empty href)</a></li>
+    <li><a>Ссылка без href</a></li>
+    <li><a href="https://kubsu.ru/" rel="nofollow">Запрещен переход поисковикам (nofollow)</a></li>
+    <li><a href="https://kubsu.ru/" rel="noindex">Запрещена для индексации поисковиками (noindex)</a></li>
+    <li><a href="ftp://username:password@ftp.example.com/path/to/file.txt">Ссылка на файл на FTP с авторизацией</a></li>
+</ul>
+
+<p>Кубанский государственный университет (КубГУ) — ведущий образовательный и научный центр на Юге России с более чем 100-летней историей. Университет сочетает традиции классического образования с современными методиками обучения и предлагает студентам широкий спектр программ. Подробнее можно узнать на <a href="https://kubsu.ru/">официальном сайте</a>.</p>
+
+<h2>Нумерованный список ссылок с title</h2>
+<ol>
+    <li><a href="http://kubsu.ru/" title="Официальный сайт КубГУ по HTTP">КубГУ (http)</a></li>
+    <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ по HTTPS">КубГУ (https)</a></li>
+    <li><a href="#forma" title="Переход к форме">На форму</a></li>
+    <li><a href="#" title="На главную">На главную</a></li>
+    <li><a href="https://www.google.com/search?q=КубГУ&num=1&hl=ru" title="Поиск с параметрами">С параметрами</a></li>
+    <li><a href="https://kubsu.ru/ru/user/74030" title="С id">С id</a></li>
+    <li><a href="ftp://username:password@ftp.example.com/path/to/file.txt" title="FTP ссылка">FTP</a></li>
+</ol>
+
+<section id="forma" style="margin-top: 50px;">
+    <h1>Форма</h1>
+    <form action="/" method="POST">
+        <label><span>ФИО:</span>
+            <input type="text" name="fio" placeholder="Фамилия Имя Отчество">
+        </label>
+        <label><span>Телефон:</span>
+            <input type="tel" name="phone" placeholder="+7(___)___-__-__">
+        </label>
+        <label><span>e-mail:</span>
+            <input type="email" name="email" placeholder="Введите ваш email">
+        </label>
+        <label><span>Дата рождения:</span>
+            <input type="date" name="birth" value="2000-01-01">
+        </label>
+        <span>Пол:</span>
+        <label><input type="radio" name="gender" value="Мужской" checked> Мужской</label>
+        <label><input type="radio" name="gender" value="Женский"> Женский</label>
+        <label><span>Любимый язык программирования:</span>
+            <select name="langs[]" multiple>
+                <option value="Pascal">Pascal</option>
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="PHP">PHP</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="Haskel">Haskel</option>
+                <option value="Clojure">Clojure</option>
+                <option value="Prolog">Prolog</option>
+                <option value="Scala">Scala</option>
+            </select>
+        </label>
+        <label><span>Биография:</span>
+            <textarea name="bio"></textarea>
+        </label>
+        <label><input type="checkbox" name="contract" checked> С контрактом ознакомлен(а)</label>
+        <input type="submit" value="Сохранить">
+    </form>
+</section>
+
+</body>
+</html>
