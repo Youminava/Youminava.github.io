@@ -1,0 +1,146 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7fb;
+    color: #222;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+/* ====== Шапка ====== */
+header {
+    background: #2f66b3;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    border-radius: 50%;
+    background: white;
+    padding: 5px;
+}
+
+/* ====== Меню ====== */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    background: #1a365d;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    border: 2px solid #1a365d;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: #2d3748;
+    border-color: #2d3748;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(26, 54, 93, 0.3);
+    text-decoration: none;
+}
+
+/* ====== Заголовок сайта ====== */
+.site-title {
+    text-align: center;
+    margin: 20px 0;
+    color: #2f66b3;
+}
+
+/* ====== Секции ====== */
+section {
+    background: #e4ecf7;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+/* ====== Таблица ====== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.data-table th, 
+.data-table td {
+    border: 1px solid #2f66b3;
+    padding: 8px;
+    text-align: center;
+}
+
+.data-table th {
+    background: #2f66b3;
+    color: white;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background: #d8e4f5;
+}
+
+.data-table tbody tr:nth-child(odd) {
+    background: #f4f7fb;
+}
+
+/* ====== Форма ====== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, textarea {
+    padding: 6px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+/* Широкая текстовое поле для автобиографии */
+textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background: #2f66b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #1f4a85;
+}
+
+/* ====== Подвал ====== */
+footer {
+    background: #2f66b3;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
